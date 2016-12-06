@@ -10,56 +10,40 @@
         <script src="js/jquery.menu-aim.js"></script>
 
         <script>
-            // ivm Mega Menu
+            // Hover Gallery
             $(function(){
-                $("#ivm-mega-menu-items").menuAim({
+                $(".ivm-gallery-thumbs").menuAim({
                     activate: function(a){
                         var idx = $(a).index();
-                        $('.ivm-mega-menu-panel').eq(idx).show();
-                        $("#ivm-mega-menu-items > li").eq(idx).addClass('ivm-hover');
+                        $('.ivm-gallery-images > div').eq(idx).show();
+                        $(".ivm-gallery-thumbs > li").eq(idx).addClass('ivm-active');
                     },  // fired on row activation
                     deactivate: function(a){
                         var idx = $(a).index();
-                        $('.ivm-mega-menu-panel').eq(idx).hide();
-                        $("#ivm-mega-menu-items > li").eq(idx).removeClass('ivm-hover');
+                        $('.ivm-gallery-images > div').eq(idx).hide();
+                        $(".ivm-gallery-thumbs > li").eq(idx).removeClass('ivm-active');
                     }  // fired on row deactivation
                 });
-                // click anywhere to hide menu
-                $("html").click(function() {
-                    $(".ivm-mega-menu-panel").css('display', 'none');
-                });
-            }); // end document ready
+            });
         </script>
-
-        <style>
-            #ivm-mega-menu {
-                position:relative;
-                width:200px;
-            }
-            #ivm-mega-menu-items {
-                box-sizing:border-box;
-                width:100%;
-                border:1px solid #ddd;
-                padding:25px;
-            }
-            .ivm-mega-menu-panel {
-                display:none;
-                position:absolute;
-                left:100%;
-                top:0;
-                border:1px solid #ddd;
-                width:600px;
-            }
-            #ivm-mega-menu ul {
-                list-style:none;
-            }
-        </style>
 
     </head>
 
     <body>
-    
         
+        <!-- gallery markup -->
+        <div class="ivm-hover-gallery">
+			<!-- thumbs -->
+            <ul class="ivm-gallery-thumbs">
+				<li><img src="images/image1.jpg" alt=""  style="height:50px;" /></li>
+				<li><img src="images/image2.jpg" style="height:50px;" alt=""  /></li>
+			</ul>
+			<!-- images -->
+			<div class="ivm-gallery-images">
+				<div><img src="images/image1.jpg" alt="" /></div>
+				<div><img src="images/image2.jpg" alt="" /></div>
+			</div>
+		</div>
 
     </body>
 </html>
