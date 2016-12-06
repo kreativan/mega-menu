@@ -26,7 +26,16 @@
                 });
             });
         </script>
-
+        
+        <style>
+            .ivm-gallery-images > div {
+                display:none;
+            }
+            .ivm-gallery-images > div.ivm-active {
+                display:block;
+            }
+        </style>   
+        
     </head>
 
     <body>
@@ -40,7 +49,7 @@
 			</ul>
 			<!-- images -->
 			<div class="ivm-gallery-images">
-				<div><img src="images/image1.jpg" alt="" /></div>
+				<div class="ivm-active"><img src="images/image1.jpg" alt="" /></div>
 				<div><img src="images/image2.jpg" alt="" /></div>
 			</div>
 		</div>
