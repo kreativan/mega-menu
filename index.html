@@ -6,181 +6,111 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Mega Menu</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.16/css/uikit.min.css" />
+        <link rel="stylesheet" href="css/ivm.mega-menu.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.16/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.16/js/uikit-icons.min.js"></script>
+
         <script src="js/jquery.menu-aim.js"></script>
+        <script src="js/ivm.mega-menu.js"></script>
 
-        <script>
-            // ivm Mega Menu
-            $(function(){
-
-                $("#ivm-mega-menu-items").menuAim({
-                    activate: function(a){
-                        var idx = $(a).index();
-                        $('.ivm-mega-menu-panel').eq(idx).show();
-                        $("#ivm-mega-menu-items > li").eq(idx).addClass('ivm-hover');
-                    },  // fired on row activation
-                    deactivate: function(a){
-                        var idx = $(a).index();
-                        $('.ivm-mega-menu-panel').eq(idx).hide();
-                        $("#ivm-mega-menu-items > li").eq(idx).removeClass('ivm-hover');
-                    }  // fired on row deactivation
-                });
-
-                // click anywhere to hide menu
-                $("html").click(function() {
-                    $(".ivm-mega-menu-panel").css('display', 'none');
-                });
-
-            }); // end document ready
-        </script>
-
-        <style>
-            #ivm-mega-menu {
-                position:relative;
-                width:200px;
-            }
-            #ivm-mega-menu-items {
-                box-sizing:border-box;
-                width:100%;
-                border:1px solid #ddd;
-                padding:25px;
-            }
-            .ivm-mega-menu-panel {
-                display:none;
-                position:absolute;
-                left:100%;
-                top:0;
-                border:1px solid #ddd;
-                width:600px;
-            }
-            #ivm-mega-menu ul {
-                list-style:none;
-            }
-        </style>
-
-    </head>
+</head>
 
     <body>
+        <div class="uk-container uk-section">
 
-        <div id="ivm-mega-menu">
-            <ul id="ivm-mega-menu-items">
-                <li><a href="#">Item 1</a></li>
-                <li><a href="#">Item 2</a></li>
-                <li><a href="#">Item 3</a></li>
-            </ul>
+            <a id="ivm-mega-menu-button" class="uk-button uk-button-primary" data-menu-mode="hover">Mega Menu</a>
+            <div id="ivm-mega-menu-wrapper">
 
+                <div id="ivm-mega-menu">
+                    <ul id="ivm-mega-menu-items">
+                        <li><a href="#">Item 1</a></li>
+                        <li><a href="#">Item 2</a></li>
+                        <li><a href="#">Item 3</a></li>
+                    </ul>
 
-            <div id="ivm-mega-menu-panels">
+                    <div id="ivm-mega-menu-panels">
+                        <div class="ivm-mega-menu-panel">
+                            <div class="uk-padding" uk-grid>
+                                <div class="uk-width-expand">
+                                    <div class="uk-panel">
+                                        <h4>Menu Items</h4>
+                                        <ul class="uk-nav">
+                                            <li><a href="#">Sub Item 1</a></li>
+                                            <li><a href="#">Sub Item 2</a></li>
+                                            <li><a href="#">Sub Item 3</a></li>
+                                            <li><a href="#">Sub Item 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="uk-panel">
+                                        <h4>Menu Items</h4>
+                                        <ul class="uk-nav">
+                                            <li><a href="#">Sub Item 1</a></li>
+                                            <li><a href="#">Sub Item 2</a></li>
+                                            <li><a href="#">Sub Item 3</a></li>
+                                            <li><a href="#">Sub Item 4</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="ivm-mega-menu-panel">
-                    <div class="uk-padding" uk-grid>
-                        <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 1</a></li>
-                                    <li><a href="#">Sub Item 2</a></li>
-                                    <li><a href="#">Sub Item 3</a></li>
-                                    <li><a href="#">Sub Item 4</a></li>
-                                </ul>
+                        <div class="ivm-mega-menu-panel">
+                            <div class="uk-padding" uk-grid>
+                                <div class="uk-width-expand">
+                                    <div class="uk-panel">
+                                        <h4>Menu Items</h4>
+                                        <ul class="uk-nav">
+                                            <li><a href="#">Sub Item 5</a></li>
+                                            <li><a href="#">Sub Item 6</a></li>
+                                            <li><a href="#">Sub Item 7</a></li>
+                                            <li><a href="#">Sub Item 8</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="uk-width-expand">
+                                    <div class="uk-panel">
+                                        <h4>Menu Items</h4>
+                                        <ul class="uk-nav">
+                                            <li><a href="#">Sub Item 5</a></li>
+                                            <li><a href="#">Sub Item 6</a></li>
+                                            <li><a href="#">Sub Item 7</a></li>
+                                            <li><a href="#">Sub Item 8</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 1</a></li>
-                                    <li><a href="#">Sub Item 2</a></li>
-                                    <li><a href="#">Sub Item 3</a></li>
-                                    <li><a href="#">Sub Item 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 1</a></li>
-                                    <li><a href="#">Sub Item 2</a></li>
-                                    <li><a href="#">Sub Item 3</a></li>
-                                    <li><a href="#">Sub Item 4</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="ivm-mega-menu-panel">
-                    <div class="uk-padding" uk-grid>
-                        <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 5</a></li>
-                                    <li><a href="#">Sub Item 6</a></li>
-                                    <li><a href="#">Sub Item 7</a></li>
-                                    <li><a href="#">Sub Item 8</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 5</a></li>
-                                    <li><a href="#">Sub Item 6</a></li>
-                                    <li><a href="#">Sub Item 7</a></li>
-                                    <li><a href="#">Sub Item 8</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 5</a></li>
-                                    <li><a href="#">Sub Item 6</a></li>
-                                    <li><a href="#">Sub Item 7</a></li>
-                                    <li><a href="#">Sub Item 8</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="ivm-mega-menu-panel">
-                    <div class="uk-padding" uk-grid>
-                         <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 9</a></li>
-                                    <li><a href="#">Sub Item 10</a></li>
-                                    <li><a href="#">Sub Item 11</a></li>
-                                    <li><a href="#">Sub Item 12</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                         <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 9</a></li>
-                                    <li><a href="#">Sub Item 10</a></li>
-                                    <li><a href="#">Sub Item 11</a></li>
-                                    <li><a href="#">Sub Item 12</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                         <div class="uk-width-expand">
-                            <div class="uk-panel">
-                                <h4>Menu Items</h4>
-                                <ul class="uk-nav">
-                                    <li><a href="#">Sub Item 9</a></li>
-                                    <li><a href="#">Sub Item 10</a></li>
-                                    <li><a href="#">Sub Item 11</a></li>
-                                    <li><a href="#">Sub Item 12</a></li>
-                                </ul>
+                        <div class="ivm-mega-menu-panel">
+                            <div class="uk-padding" uk-grid>
+                                 <div class="uk-width-expand">
+                                    <div class="uk-panel">
+                                        <h4>Menu Items</h4>
+                                        <ul class="uk-nav">
+                                            <li><a href="#">Sub Item 9</a></li>
+                                            <li><a href="#">Sub Item 10</a></li>
+                                            <li><a href="#">Sub Item 11</a></li>
+                                            <li><a href="#">Sub Item 12</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                 <div class="uk-width-expand">
+                                    <div class="uk-panel">
+                                        <h4>Menu Items</h4>
+                                        <ul class="uk-nav">
+                                            <li><a href="#">Sub Item 9</a></li>
+                                            <li><a href="#">Sub Item 10</a></li>
+                                            <li><a href="#">Sub Item 11</a></li>
+                                            <li><a href="#">Sub Item 12</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -189,6 +119,5 @@
             </div>
 
         </div>
-
     </body>
 </html>
