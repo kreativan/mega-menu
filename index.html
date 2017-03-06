@@ -22,10 +22,14 @@
     <body>
         <div class="uk-container uk-section">
 
-            <a id="ivm-mega-menu-button" class="uk-button uk-button-primary" data-menu-mode="hover">Mega Menu</a>
+            <a id="ivm-mega-menu-mobile-button" class="uk-button uk-button-primary uk-width-1-1 uk-hidden@m">Mega Menu Mobile</a>
+
+            <a id="ivm-mega-menu-button" class="uk-button uk-button-primary uk-visible@m" data-menu-mode="hover">Mega Menu</a>
+
             <div id="ivm-mega-menu-wrapper">
 
                 <div id="ivm-mega-menu">
+
                     <ul id="ivm-mega-menu-items">
                         <li><a href="#">Item 1</a></li>
                         <li><a href="#">Item 2</a></li>
@@ -33,9 +37,11 @@
                     </ul>
 
                     <div id="ivm-mega-menu-panels">
+
+                        <a class="ivm-mm-item-mobile" href="#">Item 1</a>
                         <div class="ivm-mega-menu-panel">
-                            <div class="uk-padding" uk-grid>
-                                <div class="uk-width-expand">
+                            <div uk-grid>
+                                <div class="uk-width-expand@s">
                                     <div class="uk-panel">
                                         <h4>Menu Items</h4>
                                         <ul class="uk-nav">
@@ -46,7 +52,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="uk-width-expand">
+                                <div class="uk-width-expand@s">
                                     <div class="uk-panel">
                                         <h4>Menu Items</h4>
                                         <ul class="uk-nav">
@@ -60,9 +66,10 @@
                             </div>
                         </div>
 
+                        <a class="ivm-mm-item-mobile" href="#">Item 2</a>
                         <div class="ivm-mega-menu-panel">
-                            <div class="uk-padding" uk-grid>
-                                <div class="uk-width-expand">
+                            <div uk-grid>
+                                <div class="uk-width-expand@s">
                                     <div class="uk-panel">
                                         <h4>Menu Items</h4>
                                         <ul class="uk-nav">
@@ -73,7 +80,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="uk-width-expand">
+                                <div class="uk-width-expand@s">
                                     <div class="uk-panel">
                                         <h4>Menu Items</h4>
                                         <ul class="uk-nav">
@@ -87,9 +94,10 @@
                             </div>
                         </div>
 
+                        <a class="ivm-mm-item-mobile" href="#">Item 3</a>
                         <div class="ivm-mega-menu-panel">
-                            <div class="uk-padding" uk-grid>
-                                 <div class="uk-width-expand">
+                            <div uk-grid>
+                                <div class="uk-width-expand@s">
                                     <div class="uk-panel">
                                         <h4>Menu Items</h4>
                                         <ul class="uk-nav">
@@ -100,7 +108,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                 <div class="uk-width-expand">
+                                <div class="uk-width-expand@s">
                                     <div class="uk-panel">
                                         <h4>Menu Items</h4>
                                         <ul class="uk-nav">
@@ -113,7 +121,9 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
 
             </div>

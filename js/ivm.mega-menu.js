@@ -13,8 +13,10 @@ jQuery(document).ready(function($) {
         }  // fired on row deactivation
     });
 
+    /*
+    *   Menu modes
+    */
     var ivm_mode = $('#ivm-mega-menu-button').data("menu-mode");
-
     if(ivm_mode == "hover") {
         $('#ivm-mega-menu-button, #ivm-mega-menu-wrapper, #ivm-mega-menu').hover(function() {
             $('#ivm-mega-menu-wrapper').show();
@@ -27,5 +29,17 @@ jQuery(document).ready(function($) {
             $(this).toggleClass('ivm-active');
         });
     }
+
+    /*
+    *   Responsive Menu
+    */
+    $('#ivm-mega-menu-mobile-button').click(function() {
+        $('#ivm-mega-menu-wrapper').toggleClass('ivm-active');
+        $('.ivm-mm-item-mobile').removeClass('ivm-active');
+    });
+    $('.ivm-mm-item-mobile').click(function() {
+        $('.ivm-mm-item-mobile').removeClass('ivm-active');
+        $(this).addClass('ivm-active');
+    });
 
 });
